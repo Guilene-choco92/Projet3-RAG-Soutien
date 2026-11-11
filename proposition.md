@@ -79,10 +79,10 @@ La trace de suivi sera consignée dans le journal : date, information, source et
 **Réalisation envisagée : installation, configuration, administration, intégration ou programmation :** installation et configuration d’Ollama, de ChromaDB et de n8n ; intégration de ces composants par un court script Python (version A) et par un workflow n8n (version B) ; un script de tests qui produit les tableaux de résultats. Aucun développement lourd n’est prévu.
 
 **Matériel ou machines virtuelles, logiciels et versions, connexions réseau, comptes et droits, coûts estimés et solution de repli :**
-- **Matériel :** ordinateurs personnels des membres [processeur, mémoire et carte graphique de chaque poste à compléter]. Les mesures de temps et de mémoire sont faites sur un même poste, désigné à l’avance.
+- **Matériel :** ordinateur personnel prévu pour les essais, avec un processeur Intel Core i7 au minimum et 16 Go de RAM. Le type de carte graphique reste à confirmer. Les mesures de temps et de mémoire seront réalisées sur ce même poste.
 - **Logiciels :** Ollama, Python, ChromaDB, Docker et n8n (versions exactes notées dans le README).
 - **Réseau :** Internet seulement pour télécharger les modèles, les images Docker et les paquets ; les essais se font ensuite en local. Connexions locales : n8n (conteneur Docker) → Ollama sur l’hôte (port 11434) et → serveur ChromaDB.
-- **Comptes et droits :** aucun compte payant ; compte administrateur n8n local ; droits suffisants pour installer Ollama et Docker sur les postes [à confirmer]. Aucun secret dans le dépôt.
+- **Comptes et droits :** aucun compte payant ; compte administrateur n8n local ; droits administrateur disponibles pour installer Ollama et Docker sur le poste d’essai. Aucun secret dans le dépôt.
 - **Coûts estimés :** 0 $ de dépenses supplémentaires prévues, en utilisant le matériel existant et les éditions locales ; hors électricité et connexion Internet déjà disponibles.
 - **Solutions de repli :** si la mémoire est insuffisante, envisager un modèle plus léger ou une réduction du périmètre à faire approuver par l’enseignant ; si le nœud Chroma de n8n pose problème, le magasin vectoriel intégré de n8n (Simple Vector Store, non persistant), après approbation si ce changement modifie le travail prévu, en le notant dans le rapport ; cette variante sera distinguée de la comparaison avec collection commune ; des résultats enregistrés pour la démonstration si un problème survient.
 
@@ -177,4 +177,4 @@ Les tests vérifient le service IA étudié et son utilité : qualité des résu
 
 **Répétitions :** chaque test sera répété trois fois avec les mêmes paramètres, car la sortie d’un LLM peut varier. Le modèle, sa version et ses paramètres (par exemple la température) seront notés. Les résultats seront analysés par le taux moyen de réussite et l’écart entre les répétitions.
 
-**Comparaison des solutions:** pour comparer les solutions de façon équitable, nous utiliserons les mêmes documents, les mêmes questions et le même ordinateur. Les réponses seront vérifiées à l’aide des réponses et des sources attendues.
+**Comparaison des solutions :** pour comparer les solutions de façon équitable, nous utiliserons les mêmes documents, les mêmes questions et le même ordinateur. Les réponses seront vérifiées à l’aide des réponses et des sources attendues.
